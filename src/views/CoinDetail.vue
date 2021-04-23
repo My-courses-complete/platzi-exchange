@@ -115,7 +115,6 @@ export default {
       const id = this.$route.params.id;
       Promise.all([api.getAsset(id), api.getAssetHistory(id)]).then(
         ([asset, history]) => {
-          console.log(asset);
           this.asset = asset;
           this.history = history;
         }
